@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table align="center" border="2">
+        <tr>
+            <th><input type="file" name="ima"></th>
+        </tr>
+        <tr>
+            <th>
+                <button type="submit">Upload</button>
+            </th>
+        </tr>
+    </table>
+
+
+</form>
+{%if messages%}
+{%for x in messages%}
+{{x}}
+{%endfor%}
+{%endif%}
+</body>
+</html>
